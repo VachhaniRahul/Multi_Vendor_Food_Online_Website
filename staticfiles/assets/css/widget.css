@@ -64,7 +64,7 @@
 .widget-newsletter .fieldset{display: block;}
 .widget-newsletter p{color: #2f313a;}
 .widget-newsletter form .field-holder{margin-bottom: 12px;}
-.widget-newsletter form .field-holder input.field-input{height: 41px; line-height: 41px; background-color: #f9fafc; border:1px solid #f2f2f2; color: #a5a7af; font-size: 12px; padding-left: 44px;}
+.widget-newsletter form .field-holder input.field-input{height: 41px; line-height: 41px; background-color: #f9fafc; border:1px solid #f2f2f2; color: #a5a7af; font-size: 12px; padding-left: 10px;}
 .widget-newsletter form .field-holder label{display: block; margin-bottom: 0px; position: relative;}
 .widget-newsletter form .field-holder label i{position: absolute; left: 15px; top: 13px;}
 .widget-newsletter form .field-holder .subscribe-btn{border:none; color: #fff; width: 100%; display: inline-block; height: 41px; line-height: 41px; font-size: 12px; font-weight: 600; text-transform: uppercase; border:1px solid #f2f2f2;}
@@ -185,3 +185,12 @@
 /*widget Twitter post style End*/
 .widget.widget_text .textwidget img {width: 100%;margin-bottom: 10px;}
 .widget.widget_archive label.screen-reader-text, .widget_categories label.screen-reader-text{display:none;}
+
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px; /* you can adjust */
+    margin: 0 auto;
+}
