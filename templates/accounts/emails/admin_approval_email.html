@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Restaurant Approval</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f8fa;
+      font-family: Lato, Arial, sans-serif;
+      color: #33475b;
+    }
+    #email {
+      margin: auto;
+      width: 600px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header {
+      {% comment %} background-color: #C33332;
+      color: #fff; {% endcomment %}
+      padding: 20px;
+      text-align: center;
+    }
+    .header img {
+      width: 200px;
+    }
+    .content {
+      padding: 30px;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #C33332;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      letter-spacing: 1px;
+    }
+    .footer {
+      background-color: #C33332;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="email">
+    <!-- Header -->
+    <div class="header">
+      <img src="https://rathank.com/foodonline/logo/logo.png" alt="FoodOnline Logo">
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h2>Hello {{ user.first_name }},</h2>
+      {% if is_approved %}
+        <p>🎉 Congratulations! Your restaurant has been <strong>approved</strong> by our admin team.</p>
+        <p>You can now publish your food menu and start receiving orders on our marketplace.</p>
+        <a href="http://127.0.0.1:8000/" class="btn">Visit Dashboard</a>
+      {% else %}
+        <p>⚠️ We’re sorry! Unfortunately, your restaurant is <strong>not eligible</strong> for publishing a menu on our marketplace at this time.</p>
+        <p>For more details, please contact us at <a href="mailto:support@foodonline.com">support@foodonline.com</a>.</p>
+        <a href="http://127.0.0.1:8000/" class="btn">Contact Support</a>
+      {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© {% now "Y" %} FoodOnline Marketplace. All Rights Reserved.</p>
+      <p><a href="http://127.0.0.1:8000/">Visit Website</a></p>
+    </div>
+  </div>
+</body>
+</html>
