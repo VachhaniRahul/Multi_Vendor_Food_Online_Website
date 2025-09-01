@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as user_login, logout as user_logout
+from .forms import UserForm
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.http import urlsafe_base64_decode
 from django.contrib.auth.tokens import default_token_generator
  
-from .forms import UserForm
 from .models import User
 from .utils import detect_user, check_role_customer, check_role_vendor, send_email
 
