@@ -10,7 +10,6 @@ class UserForm(forms.ModelForm):
     
     def clean(self):
         cleaned_data = super(UserForm, self).clean()
-        print(cleaned_data)
         password = cleaned_data.get('password')
         confirm_password = cleaned_data.get('confirm_password')
 
