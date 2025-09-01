@@ -19,10 +19,11 @@ repos:
       - id: isort
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.8.3
+    rev: 1.8.6
     hooks:
       - id: bandit
-        args: ["-r", ".", "--exclude=migrations"]
+        args: ["--exclude", "migrations"]
+
 
 
   - repo: https://github.com/pypa/pip-audit
