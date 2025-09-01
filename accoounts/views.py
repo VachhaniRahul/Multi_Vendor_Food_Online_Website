@@ -129,7 +129,7 @@ def activate(request, uuid64, token):
     try:
         uid = urlsafe_base64_decode(uuid64).decode()
         user = User._default_manager.get(pk=uid)
-    except:
+    except Exception as e:
         user = None
 
     if user is not None and default_token_generator.check_token(user, token):
@@ -162,7 +162,7 @@ def reset_password_validate(request, uuid64, token):
     try:
         uid = urlsafe_base64_decode(uuid64).decode()
         user = User._default_manager.get(pk=uid)
-    except:
+    except Exception as e:
         user = None
 
     if user is not None and default_token_generator.check_token(user, token):
