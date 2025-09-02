@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="main-section">
-			<div class="page-section restaurant-detail-image-section" style=" background: url({%static "assets/extra-images/cover-photo01.jpg"%}) no-repeat scroll 0 0 / cover;">
+			{% comment %} <div class="page-section restaurant-detail-image-section" style=" background: url({%static "assets/extra-images/cover-photo01.jpg"%}) no-repeat scroll 0 0 / cover;">
 				<!-- Container Start -->
 				<div class="container">
 					<!-- Row Start -->
@@ -34,7 +34,8 @@
 					<!-- Row End -->
 				</div>
 				<!-- Container End -->
-			</div>
+			</div> {% endcomment %}
+			{% include "includes/cover.html" %}
 			<div class="page-section account-header buyer-logged-in">
 				<div class="container">
 					<div class="row">

@@ -88,10 +88,16 @@ class UserProfile(models.Model):
         User, on_delete=models.CASCADE, related_name="profile", null=True, blank=True
     )
     profile_picture = models.ImageField(
-        upload_to="users/profile_pictures", blank=True, null=True
+        upload_to="users/profile_pictures",
+        blank=True,
+        null=True,
+        default="users/profile_pictures/default.png",
     )
     cover_photo = models.ImageField(
-        upload_to="users/cover_photos", blank=True, null=True
+        upload_to="users/cover_photos",
+        blank=True,
+        null=True,
+        default="users/cover_photos/cover-photo-3.PNG",
     )
     address_line_1 = models.CharField(max_length=100, blank=True, null=True)
     address_line_2 = models.CharField(max_length=100, blank=True, null=True)

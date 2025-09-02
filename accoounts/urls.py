@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import include, path
 
 from . import views
 
@@ -19,4 +19,5 @@ urlpatterns = [
         name="reset_password_validate",
     ),
     path("resetPassword/", views.reset_password, name="reset_password"),
+    path("vendor/", include("vendor.urls")),
 ]
